@@ -2,6 +2,7 @@ $main-clean: #ffffff;
 $main-blue: #478BF9;
 $main-navy: #110A1D;
 $additional: #9DADF2;
+$main-deep: #1E1231;
 
 * {
     box-sizing: border-box;
@@ -28,6 +29,9 @@ $additional: #9DADF2;
     text-align: center;
     font-weight: 400;
     text-transform: uppercase;
+}
+html, body {
+    scrollbar-color: #478BF9 #FFFFFF1F;  /* толщина */
 }
 
 @import 'header.scss';
