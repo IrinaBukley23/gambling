@@ -8,7 +8,7 @@ burger.addEventListener('click', () => {
     menu.classList.toggle('active');
 });
 
-// lang list
+// lang switcher
 
 let langBtn = document.querySelector('.lang');
 let langList = document.querySelector('.lang__list');
