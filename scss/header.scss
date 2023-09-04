@@ -39,13 +39,35 @@
         width: 242px;
     }
     &__menu {
+        &_btns {
+            display: none;
+            margin: 30px 0 5px 0;
+            margin: 0 auto;
+            button {
+                border: none;
+                padding: 0;
+            }
+            &.active {
+                display: block;
+                text-align: center;
+            }
+            &.blue {
+                background-color: $main-blue;
+                button {
+                    background-color: $main-blue;
+                }
+            }
+        }
         &_list {
             display: flex;
             align-items: center;
             height: 90px;
             justify-content: space-between;
             margin: 0 0 0 40px;
-            max-width: 575px;
+            max-width: 580px;
+            @media (max-width: 1016px) {
+                max-width: 530px;     
+            } 
             &-item {
                 margin: 0 28px 0 0;
                 font-size: 16px;

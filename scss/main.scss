@@ -10,6 +10,7 @@
     }
     @media (max-width: 1200px) {
         flex-direction: column;
+        height: auto;
     }
     &__info {
         width: 39%;
@@ -137,7 +138,7 @@
         width: 32%;
         @media (max-width: 1200px) {
             width: 60%;
-            margin: 33px 0 0 0;
+            margin: 33px 0 120px 0;
         }
         @media (max-width: 700px) {
             width: 96%;
@@ -168,7 +169,9 @@
             overflow: scroll;
             scroll-padding-top: 150px;
             scroll-behavior: smooth;
-
+            @media (max-width: 700px) {
+                height: 480px;
+            }
             &::-webkit-scrollbar {
                 width: 8px;   /* ширина всей полосы прокрутки */
               }

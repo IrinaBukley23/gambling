@@ -2,10 +2,14 @@
 
 let burger = document.querySelector('.burger');
 let menu = document.querySelector('.header__menu_list');
+let menuBtns = document.querySelectorAll('.header__menu_btns');
 
 burger.addEventListener('click', () => {
     burger.classList.toggle('active');
     menu.classList.toggle('active');
+    menuBtns.forEach(item => {
+        item.classList.toggle('active');
+    })
 });
 
 // lang switcher
