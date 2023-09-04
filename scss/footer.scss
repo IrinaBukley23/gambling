@@ -1,0 +1,42 @@
+.footer {
+    border-radius: 64px 64px 0 0;
+    border-top: 4px solid $main-blue;
+    border-left: 4px solid $main-blue;
+    border-right: 4px solid $main-blue;
+    position: relative;
+    height: 130px;
+    padding: 40px 140px 24px;
+    &__wrapper {
+        align-items: flex-end;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__menu {
+        &_list {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            &-item {
+                margin-right: 40px;
+                &.active a{
+                    color: $main-blue;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    &__social {
+        &_title {
+            text-align: right;
+            margin-bottom: 15px;
+        }
+        &_list {
+            display: flex;
+            justify-content: flex-end;
+            &-item {
+                margin-left: 8px;
+            } 
+        }
+    }
+}
