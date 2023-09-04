@@ -95,7 +95,8 @@
             margin: 0;
         }
         &__block {
-            width: 290px;       
+            width: 290px;  
+            position: relative;     
             @media (max-width: 1370px) {
                 width: 330px;     
             } 
@@ -174,4 +175,33 @@
             transform: scale(0);
         }
     } 
+    .lang__list {
+        display: none;
+        &.active {
+            display: block;
+            position: absolute;
+            left: 5px;
+            bottom: -95px;
+        }
+        &-item {
+            border: 2px solid $main-blue;
+            border-radius: 28px;
+            padding: 5px 10px;
+            margin: 0 0 8px;
+            text-transform: uppercase;
+            transition: all .4s ease-in;
+            span {
+                transition: all .4s ease-in;
+            }
+            &:hover {
+                cursor: pointer;
+                background-color: $main-blue;
+                span {
+                    cursor: pointer;
+                    background-color: $main-blue;
+                }
+            }
+            
+        }
+    }
 }
