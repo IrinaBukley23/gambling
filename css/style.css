@@ -459,6 +459,8 @@ html, body {
   overflow: hidden;
   width: 100px;
   margin: 0 15px 0 0;
+  -webkit-animation: ticker-up 15s infinite linear;
+          animation: ticker-up 15s infinite linear;
 }
 .main__banner_2 {
   background: url("../img/Line_Vertical_2.png");
@@ -467,6 +469,8 @@ html, body {
   overflow: hidden;
   width: 100px;
   margin: 0 15px 0 0;
+  -webkit-animation: ticker-down 15s infinite linear;
+          animation: ticker-down 15s infinite linear;
 }
 .main__banner_3 {
   background: url("../img/Line_Vertical_3.png");
@@ -474,6 +478,8 @@ html, body {
   height: 100%;
   overflow: hidden;
   width: 100px;
+  -webkit-animation: ticker-up 15s infinite linear;
+          animation: ticker-up 15s infinite linear;
 }
 @media (max-width: 1200px) {
   .main .main__banner-rotate_1 {
@@ -483,6 +489,8 @@ html, body {
     overflow: hidden;
     width: 100%;
     margin: 0 15px 0 0;
+    -webkit-animation: ticker-left 15s infinite linear;
+            animation: ticker-left 15s infinite linear;
   }
   .main .main__banner-rotate_2 {
     background: url("../img/horisontal/Line_Vertical_2.png");
@@ -491,6 +499,8 @@ html, body {
     overflow: hidden;
     width: 100%;
     margin: 0 15px 0 0;
+    -webkit-animation: ticker-right 15s infinite linear;
+            animation: ticker-right 15s infinite linear;
   }
   .main .main__banner-rotate_3 {
     background: url("../img/horisontal/Line_Vertical_1.png");
@@ -498,6 +508,8 @@ html, body {
     height: 50px;
     overflow: hidden;
     width: 100%;
+    -webkit-animation: ticker-left 15s infinite linear;
+            animation: ticker-left 15s infinite linear;
   }
 }
 .main__blog {
@@ -567,6 +579,16 @@ html, body {
   font-weight: 400;
   font-size: 24px;
   line-height: 28px;
+  -webkit-transform: translate(0px, 120%);
+          transform: translate(0px, 120%);
+  opacity: 0;
+  -webkit-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+.main__blog_block-item._anime {
+  -webkit-transform: translate(0px 0px);
+          transform: translate(0px 0px);
+  opacity: 1;
 }
 @media (max-width: 1520px) {
   .main__blog_block-item {
@@ -604,6 +626,119 @@ html, body {
   background: #478BF9;
 }
 
+@-webkit-keyframes ticker-up {
+  0% {
+    -webkit-transform: translate(0, 100%);
+            transform: translate(0, 100%);
+  }
+  50% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(0, -100%);
+            transform: translate(0, -100%);
+  }
+}
+
+@keyframes ticker-up {
+  0% {
+    -webkit-transform: translate(0, 100%);
+            transform: translate(0, 100%);
+  }
+  50% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(0, -100%);
+            transform: translate(0, -100%);
+  }
+}
+@-webkit-keyframes ticker-down {
+  0% {
+    -webkit-transform: translate(0, -100%);
+            transform: translate(0, -100%);
+  }
+  50% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(0, 100%);
+            transform: translate(0, 100%);
+  }
+}
+@keyframes ticker-down {
+  0% {
+    -webkit-transform: translate(0, -100%);
+            transform: translate(0, -100%);
+  }
+  50% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(0, 100%);
+            transform: translate(0, 100%);
+  }
+}
+@-webkit-keyframes ticker-right {
+  0% {
+    -webkit-transform: translate(-100%, 0);
+            transform: translate(-100%, 0);
+  }
+  50% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(100%, 0);
+            transform: translate(100%, 0);
+  }
+}
+@keyframes ticker-right {
+  0% {
+    -webkit-transform: translate(-100%, 0);
+            transform: translate(-100%, 0);
+  }
+  50% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(100%, 0);
+            transform: translate(100%, 0);
+  }
+}
+@-webkit-keyframes ticker-left {
+  0% {
+    -webkit-transform: translate(100%, 0);
+            transform: translate(100%, 0);
+  }
+  50% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(-100%, 0);
+            transform: translate(-100%, 0);
+  }
+}
+@keyframes ticker-left {
+  0% {
+    -webkit-transform: translate(100%, 0);
+            transform: translate(100%, 0);
+  }
+  50% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(-100%, 0);
+            transform: translate(-100%, 0);
+  }
+}
 .footer {
   border-radius: 64px 64px 0 0;
   border-top: 4px solid #478BF9;
